@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobFinder: Intern Roles in India</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #0e1117;
+            color: #fafafa;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .flag-emoji {
+            font-size: 2rem;
+            margin-right: 0.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fafafa;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #a3a8b8;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .form-container {
+            background: #262730;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            border: 1px solid #3d4043;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.9rem;
+            color: #fafafa;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: #3d4043;
+            border: 1px solid #4a4d52;
+            border-radius: 0.5rem;
+            color: #fafafa;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: #ff4b4b;
+            box-shadow: 0 0 0 2px rgba(255, 75, 75, 0.2);
+        }
+
+        input[type="text"]::placeholder, input[type="number"]::placeholder {
+            color: #a3a8b8;
+        }
+
+        .slider-container {
+            margin-top: 0.5rem;
+        }
+
+        .slider {
+            width: 100%;
+            height: 6px;
+            background: #3d4043;
+            border-radius: 3px;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #ff4b4b;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #0e1117;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #ff4b4b;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #0e1117;
+        }
+
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: #a3a8b8;
+        }
+
+        .find-button {
+            max-width: fit-content;
+            background: #ff4b4b;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+            margin-top: 1rem;
+        }
+
+        .find-button:hover {
+            background: #ff3333;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 75, 75, 0.3);
+        }
+
+        .find-button:active {
+            transform: translateY(0);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .form-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <span class="flag-emoji">🇮🇳</span>
+                JobFinder: Intern Roles in India
+            </h1>
+            <p class="subtitle">Scrapes current internship listings in India and ranks them based on your filters.</p>
+        </div>
+        <button class="find-button">Find Jobs</button>
+    </div>
+
+    <script>
+        const button = document.getElementsByTagName('button')[0];
+        button.addEventListener('click', () => {
+            window.location.href = 'https://fjobfinder.streamlit.app/';
+        });
+    </script>
+</body>
+</html>
