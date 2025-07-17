@@ -1,5 +1,6 @@
 {
   "keyword": "python",
   "location": "remote",
-  "filters": ["intern", "developer", "junior"]
+  "filters": ["intern", "developer", "junior"],
+  "minimum_stipend": "10000"
 }
